@@ -1,0 +1,13 @@
+<div *ngIf="usuario">
+  <h2>Edit usuario {{ usuario.nome }}</h2>
+  
+  <label for="nome">Nome: </label>
+  <input type="text" [(ngModel)]="usuario.nome" name="nome"/>
+  <input type="text" [(ngModel)]="usuario.grupo" name="grupo"/>
+  <input type="text" [(ngModel)]="usuario.email" name="email"/>
+  <input type="text" [(ngModel)]="usuario.senha" name="senha"/>
+  
+  <p>
+  <button (click)="usuarioEdit()">Gravar</button>
+  </p>
+</div>  

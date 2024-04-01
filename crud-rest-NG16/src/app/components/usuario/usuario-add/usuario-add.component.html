@@ -1,0 +1,31 @@
+<div>
+
+  <h2>Write a new Usuario</h2>
+
+  <p>
+  <label for="nome">Nome: </label>
+  <input type="text" [(ngModel)]="newUsuario.nome" name="nome"/>
+  </p>
+  <p>
+    <label for="nome">Grupo: </label>
+    <input type="text" [(ngModel)]="newUsuario.grupo" name="grupo"/>
+  </p>
+  <p>
+    <label for="nome">Email: </label>
+    <input type="email" [(ngModel)]="newUsuario.email" name="email"/>
+    </p>
+  <p>
+  <label for="senha">Senha: </label>
+  <input type="text" [(ngModel)]="newUsuario.senha" name="senha"/>
+  </p>
+   
+  <p>
+    <button (click)="createUsuario(newUsuario)">Gravar</button>
+  </p>
+
+</div>
+
+<div *ngIf="mensagem">
+  {{mensagem}}
+</div>
+

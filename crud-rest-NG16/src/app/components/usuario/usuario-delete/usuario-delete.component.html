@@ -1,0 +1,22 @@
+<div *ngIf="usuario">
+  
+<h3>Usuário</h3>
+
+  <div>{{usuario.nome}}</div>
+  <div>{{usuario.grupo}}</div>
+  <div>{{usuario.email}}</div>
+
+  <p>Are you sure you want to delete this usuario?
+    <button (click)="usuarioDelete(usuario.id)">Yes</button>
+    <button (click)="goBack()">No</button>
+  </p>
+</div>
+
+<div *ngIf="errorMessage">
+  {{errorMessage}}
+</div>
+
+
+<div *ngIf="!usuario">
+  <p>Dados Não Encontrados</p>
+</div>

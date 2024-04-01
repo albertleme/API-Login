@@ -1,0 +1,41 @@
+<div *ngIf="usuarios">
+
+  <h3>Usuarios</h3>
+  
+    <ul>
+      
+      <li *ngFor="let usuario of usuarios">
+     
+        <input type="text" name="Nome" [(ngModel)]="usuario.nome" readonly>
+        <input type="text" name="Grupo" [(ngModel)]="usuario.grupo" readonly>
+        <input type="text" name="Email" [(ngModel)]="usuario.email" readonly>
+                           
+        <button (click)="alterarUsuario(usuario.id)">
+          Alt
+        </button> 
+        <button (click)="excluirUsuario(usuario.id)">
+          Excl
+        </button> 
+      </li>
+  
+      </ul>
+  
+      <div>
+        <a [routerLink]="['/UsuarioAdd']">IncluirUsuario</a>
+      </div>
+      
+      <p>
+        <button (click)="incluirUsuario()">
+          Incluir Usuario
+        </button> 
+      </p>
+  
+      <p>
+        <button (click)="refresh()">
+          Refresh
+        </button> 
+      </p>
+
+         
+  
+   
